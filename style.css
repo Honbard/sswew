@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url('https://media.discordapp.net/attachments/895511469129605130/1150312023754813440/ACS_JAYA.png?width=1440&height=568');
+  background-size: cover;
+  background-position: center;
+}
+
+.diagram-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+.S1 {
+  width: 50px;
+  height: 20px;
+  background-color: #dcdcdc;
+  border: 2px solid #000;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.P2 {
+  width: 50px;
+  height: 200px;
+  background-color: #dcdcdc;
+  border: 2px solid #000;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+}
+
+.btn-ref {
+  background-color: #dcdcdc;
+}
+
+.btn-cl {
+  background-color: #ff0000;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+.btn-shutdown {
+  width: 100px;
+  background-color: #000;
+  margin-top: 10px;
+}
+
+.status {
+  width: 150px;
+  padding: 10px;
+  background-color: #dcdcdc;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.CR {
+  width: 150px;
+  padding: 10px;
+  background-color: #dcdcdc;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}

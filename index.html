@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by Ardan</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Vertical Diagram</title>
+</head>
+<body>
+  <div class="diagram-container">
+    <div class="CR" id="CR">PEMBANGKIT ACS G-XLT-523</div>
+    <div class="status" id="status-text">INITIALIZING</div>
+    <div class="S1" id="S1"></div>
+    <div class="P2" id="P2"></div>
+    <div class="buttons">
+      <button class="btn btn-ref" onclick="changeColorAndText('REF')">REF</button>
+      <button class="btn btn-cl" onclick="changeColorAndText('CL')">CL</button>
+    </div>
+      <button class="btn btn-shutdown" onclick="changeColorAndText                                      ('SHUTDOWN')">SHUTDOWN</button>
+   </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    #box {
+      display: none;
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background-color: black;
+      color: white;
+      text-align: center;
+      line-height: 200px;
+      font-size: 18px;
+    }
+
+    #flashingBox {
+      display: none;
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background-color: black;
+      color: white;
+      text-align: center;
+      line-height: 200px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="box">Standby</div>
+<div id="flashingBox">CL | INJECTING</div>
+
+<script>
+  let standbyBox = document.getElementById('box');
+  let flashingBox = document.getElementById('flashingBox');
+  let isFlashing = false;
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Shift') {
+      standbyBox.style.display = 'block';
+    } else if (event.key === '6') {
+      standbyBox.style.display = 'none';
+      toggleFlashing();
+    }
+  });
+
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'Shift') {
+      standbyBox.style.display = 'none';
+    } else if (event.key === '6') {
+      standbyBox.style.display = 'none';
+      stopFlashing();
+    }
+  });
+
+  function toggleFlashing() {
+    isFlashing = !isFlashing;
+    flashingBox.style.display = isFlashing ? 'block' : 'none';
+
+    if (isFlashing) {
+      setInterval(() => {
+        flashingBox.style.backgroundColor = flashingBox.style.backgroundColor === 'red' ? 'black' : 'red';
+      }, 500);
+    }
+  }
+
+  function stopFlashing() {
+    isFlashing = false;
+    flashingBox.style.display = 'none';
+    flashingBox.style.backgroundColor = 'black';
+  }
+</script>
+
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
